@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RLT Resources</title>
+  <style>
+    body {
+      background-color: #212121;
+    }
+    
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .button {
+      position: relative;
+      overflow: hidden;
+      height: 3rem;
+      padding: 0 2rem;
+      border-radius: 1.5rem;
+      background: #3d3a4e;
+      background-size: 400%;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover::before {
+      transform: scaleX(1);
+    }
+
+    .button-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      width: 100%;
+      height: inherit;
+      border-radius: inherit;
+      background: linear-gradient(82.3deg,
+          rgba(150, 93, 233, 1) 10.8%,
+          rgba(99, 88, 238, 1) 94.3%);
+      transition: all 0.475s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button class="button">
+      <span class="button-content">RLT Resources</span>
+    </button>
+  </div>
+  <script>
+    // Get reference to button
+    const button = document.querySelector('.button');
+
+    // Define redirect URL
+    const redirectURL = "https://drive.google.com/drive/folders/1-1OiGr7CS7BD25Sd0zzvCY9cvUeQzxtR?usp=drive_link"; // Replace with your desired URL
+
+    // Add click event listener to button
+    button.addEventListener('click', () => {
+      window.location.href = redirectURL; // Redirect to target URL
+    });
+  </script>
+  <script type="text/javascript" src="//counter.websiteout.com/js/8/4/100/0"></script>
+</body>
+
+</html>
